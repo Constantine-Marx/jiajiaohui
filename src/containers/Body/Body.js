@@ -1,8 +1,8 @@
 // 引入React组件
 import {Component} from "react";
 // 引入Taro UI组件库中的AtCard组件
-import {AtCard, AtSearchBar} from "taro-ui";
-import {ScrollView, Text, View} from "@tarojs/components";
+import {AtCard} from "taro-ui";
+import {ScrollView, View} from "@tarojs/components";
 
 // 引入样式文件
 import './Body.scss'
