@@ -44,24 +44,5 @@ class Footer extends Component {
     );
   }
 }
-//
-// const mapStateToProps = (state) => {
-//   return {
-//     current: state.current,
-//   };
-// };
-//
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     toHome: () => dispatch(toHome()),
-//     toPublish: () => dispatch(toPublish()),
-//     toUser: () => dispatch(toUser()),
-//   };
-// };
-
 export default Footer;
-
-//git添加远程仓库
-// git remote add origin
-
 

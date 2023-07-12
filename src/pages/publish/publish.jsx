@@ -9,7 +9,7 @@ export default function Publish() {
       <View className='publish'>
         <Text>publish</Text>
         <View className={'publish__body'}>
-          <Image src={'https://i.postimg.cc/GhDTz62d/code.jpg'} className={'publish__body__img'}/>
+          <Image src={''} className={'publish__body__img'}/>
         <Footer class='footer' />
         </View>
       </View>

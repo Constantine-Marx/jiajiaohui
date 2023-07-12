@@ -4,6 +4,11 @@ import {Provider} from "react-redux";
 import store from "./store";
 
 class App extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
+
   componentDidMount () {}
 
   componentDidShow () {}
