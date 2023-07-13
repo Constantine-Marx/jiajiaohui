@@ -1,0 +1,49 @@
+@import "~taro-ui/dist/style/components/search-bar.scss";
+@import "~taro-ui/dist/style/components/button.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+
+
+.searchbar {
+  color: #ff0008;
+  padding: 10px 0;
+  text-align: center;
+  flex: 3;
+  height: 100%;
+  border: 1px solid #ffffff;
+  justify-content: flex-end;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+.regionButton {
+  padding: 10px 0;
+  text-align: center;
+  flex: 1;
+  height: 100%;
+  border: 1px solid #ffffff;
+  justify-content: flex-end;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+.at-row {
+  //设置字体颜色为黑色
+  padding: 9px  0 9px 0;
+  height: 100%;
+  margin: 0 auto; // 添加这一行
+  border-radius: 50px;
+  background-color: grey;
+  border: 1px solid grey;
+  justify-content: flex-end;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
