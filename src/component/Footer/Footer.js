@@ -1,11 +1,20 @@
 import {AtTabBar} from "taro-ui";
 import React, {Component} from "react";
 import Taro from "@tarojs/taro";
+import {current} from "@reduxjs/toolkit";
 
-class Footer extends Component {
-
+class Footer extends React.Component {
+  constructor() {
+    super(...arguments);
+    this.state = {
+      current: this.props.current
+    }
+  }
 
   handleClick(value) {
+    this.setState({
+      current: value,
+    });
     switch (value) {
       case 0:
         Taro.redirectTo({

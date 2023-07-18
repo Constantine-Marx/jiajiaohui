@@ -5,6 +5,7 @@ import Footer from '../../component/Footer/Footer';
 import Body from "../../containers/Body/Body";
 
 export default function Index() {
+
   return (
     <View className='tutor' disableScroll='true'>
       <Header class='header' />

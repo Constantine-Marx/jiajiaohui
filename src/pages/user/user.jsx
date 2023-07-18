@@ -4,7 +4,7 @@ import Taro from '@tarojs/taro';
 
 import './user.scss'
 
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 
 export default function User() {
   const [sucData, setSucData] = useState({});
@@ -19,6 +19,9 @@ export default function User() {
             data: {
               auth_code: res.code
             },
+            headers: {
+              'content-type': 'application/json;charset=UTF-8;'
+            },
             success: function (res) {
               setSucData(res);
               console.log(res);
@@ -29,10 +32,10 @@ export default function User() {
         }
       }
     }).then(r => {
-      console.log(r)
+
     })
   }
-  
+
   useEffect(() => {
     console.log(sucData);
   }, [sucData]);
@@ -40,7 +43,14 @@ export default function User() {
   return (
     <View className='user'>
       <Button onClick={handleLogin}>Login</Button>
-      {sucData.data && <Text>{sucData.data}</Text>}
+      {sucData.data && (
+        <View style={{
+          border: '1px solid black', padding: '10px', whiteSpace: 'pre-wrap',
+          width: '200px', height: '100px'
+        }}>
+          {sucData.data}
+        </View>
+      )}
       <Footer class='footer'/>
     </View>
   )

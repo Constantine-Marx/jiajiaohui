@@ -1,23 +1,27 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import './app.scss'
 import {Provider} from "react-redux";
 import store from "./store";
 
 class App extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {}
   }
 
-  componentDidMount () {}
+  componentDidMount() {
+  }
 
-  componentDidShow () {}
+  componentDidShow() {
+  }
 
-  componentDidHide () {}
+  componentDidHide() {
+  }
+
   // this.props.children 是将要会渲染的页面
-  render () {
+  render() {
     <Provider store={store}>
-      <App />
+      <App/>
     </Provider>
     return this.props.children
   }
