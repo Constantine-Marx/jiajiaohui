@@ -10,6 +10,9 @@ class App extends Component {
   }
 
   componentDidMount() {
+    store.subscribe(() => {
+      console.log(store.getState())
+    })
   }
 
   componentDidShow() {

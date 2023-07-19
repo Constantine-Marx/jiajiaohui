@@ -1,7 +1,8 @@
 import {AtTabBar} from "taro-ui";
-import React, {Component} from "react";
+import React from "react";
 import Taro from "@tarojs/taro";
-import {current} from "@reduxjs/toolkit";
+import store from "../../store";
+import {toHome, toPublish, toUser} from "../../store/actions";
 
 class Footer extends React.Component {
   constructor() {
@@ -17,16 +18,19 @@ class Footer extends React.Component {
     });
     switch (value) {
       case 0:
+        store.dispatch(toHome());
         Taro.redirectTo({
           url: "/pages/index/index",
         }).then(r => console.log(r));
         break;
       case 1:
+        store.dispatch(toPublish());
         Taro.redirectTo({
           url: "/pages/publish/publish"
         }).then(r => console.log(r));
         break;
       case 2:
+        store.dispatch(toUser());
         Taro.redirectTo({
           url: "/pages/user/user"
         }).then(r => console.log(r));
@@ -47,7 +51,7 @@ class Footer extends React.Component {
             { title: "我的", iconType: "user" },
           ]}
           onClick={this.handleClick.bind(this)}
-          current={this.props.current}
+          current={store.getState()}
         />
       </>
     );
