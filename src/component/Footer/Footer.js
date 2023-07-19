@@ -13,24 +13,24 @@ class Footer extends React.Component {
   }
 
   handleClick(value) {
-    this.setState({
-      current: value,
-    });
     switch (value) {
       case 0:
         store.dispatch(toHome());
+        console.log(store.getState())
         Taro.redirectTo({
           url: "/pages/index/index",
         }).then(r => console.log(r));
         break;
       case 1:
         store.dispatch(toPublish());
+        console.log('here'+store.getState())
         Taro.redirectTo({
           url: "/pages/publish/publish"
         }).then(r => console.log(r));
         break;
       case 2:
         store.dispatch(toUser());
+        console.log(store.getState())
         Taro.redirectTo({
           url: "/pages/user/user"
         }).then(r => console.log(r));
@@ -52,6 +52,7 @@ class Footer extends React.Component {
           ]}
           onClick={this.handleClick.bind(this)}
           current={store.getState()}
+
         />
       </>
     );
