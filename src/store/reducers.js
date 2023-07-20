@@ -1,6 +1,6 @@
-import {HOME, PUBLISH} from "./constants";
+import {HOME} from "./constants";
 
-function reducers(state = PUBLISH, action) {
+function reducers(state = HOME, action) {
   switch (action.type) {
     case 'toPage':
       return action.payload.num;

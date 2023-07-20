@@ -16,24 +16,21 @@ class Footer extends React.Component {
     switch (value) {
       case 0:
         store.dispatch(toHome());
-        console.log(store.getState())
-        Taro.redirectTo({
-          url: "/pages/index/index",
-        }).then(r => console.log(r));
+        Taro.switchTab({
+          url: "/pages/index/index"
+        })
         break;
       case 1:
         store.dispatch(toPublish());
-        console.log('here'+store.getState())
-        Taro.redirectTo({
+        Taro.switchTab({
           url: "/pages/publish/publish"
-        }).then(r => console.log(r));
+        })
         break;
       case 2:
         store.dispatch(toUser());
-        console.log(store.getState())
-        Taro.redirectTo({
+        Taro.switchTab({
           url: "/pages/user/user"
-        }).then(r => console.log(r));
+        })
         break;
       default:
         break;
