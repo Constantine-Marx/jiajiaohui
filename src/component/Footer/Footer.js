@@ -18,19 +18,19 @@ class Footer extends React.Component {
         store.dispatch(toHome());
         Taro.switchTab({
           url: "/pages/index/index"
-        })
+        }).then(r => console.log(r))
         break;
       case 1:
         store.dispatch(toPublish());
         Taro.switchTab({
           url: "/pages/publish/publish"
-        })
+        }).then(r => console.log(r))
         break;
       case 2:
         store.dispatch(toUser());
         Taro.switchTab({
           url: "/pages/user/user"
-        })
+        }).then(r => console.log(r ))
         break;
       default:
         break;
