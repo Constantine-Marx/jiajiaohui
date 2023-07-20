@@ -1,30 +1,26 @@
-//引入constants.js中定义的action常量名
-import {HOME, PUBLISH, USER} from "./constants";
-
-//定义action对象
 export const toHome = () => {
   return {
-    type: HOME,
+    type: 'toPage',
     payload: {
-      text: 'Use Redux'
+      num:0
     }
   }
 }
 
 export const toPublish = () => {
   return {
-    type: PUBLISH,
+    type: 'toPage',
     payload: {
-      text: 'Use Redux'
+      num:1
     }
   }
 }
 
 export const toUser = () => {
   return {
-    type: USER,
+    type: 'toPage',
     payload: {
-      text: 'Use Redux'
+      num:2
     }
   }
 }

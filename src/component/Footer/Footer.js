@@ -1,26 +1,36 @@
 import {AtTabBar} from "taro-ui";
-import React, {Component} from "react";
+import React from "react";
 import Taro from "@tarojs/taro";
+import store from "../../store";
+import {toHome, toPublish, toUser} from "../../store/actions";
 
-class Footer extends Component {
-
+class Footer extends React.Component {
+  constructor() {
+    super(...arguments);
+    this.state = {
+      current: this.props.current
+    }
+  }
 
   handleClick(value) {
     switch (value) {
       case 0:
-        Taro.redirectTo({
-          url: "/pages/index/index",
-        }).then(r => console.log(r));
+        store.dispatch(toHome());
+        Taro.switchTab({
+          url: "/pages/index/index"
+        }).then(r => console.log(r))
         break;
       case 1:
-        Taro.redirectTo({
+        store.dispatch(toPublish());
+        Taro.switchTab({
           url: "/pages/publish/publish"
-        }).then(r => console.log(r));
+        }).then(r => console.log(r))
         break;
       case 2:
-        Taro.redirectTo({
+        store.dispatch(toUser());
+        Taro.switchTab({
           url: "/pages/user/user"
-        }).then(r => console.log(r));
+        }).then(r => console.log(r ))
         break;
       default:
         break;
@@ -38,30 +48,12 @@ class Footer extends Component {
             { title: "我的", iconType: "user" },
           ]}
           onClick={this.handleClick.bind(this)}
-          current={this.props.current}
+          current={store.getState()}
+
         />
       </>
     );
   }
 }
-//
-// const mapStateToProps = (state) => {
-//   return {
-//     current: state.current,
-//   };
-// };
-//
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     toHome: () => dispatch(toHome()),
-//     toPublish: () => dispatch(toPublish()),
-//     toUser: () => dispatch(toUser()),
-//   };
-// };
-
 export default Footer;
-
-//git添加远程仓库
-// git remote add origin
-
 
