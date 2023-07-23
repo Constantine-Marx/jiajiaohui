@@ -1,7 +1,6 @@
 import React from 'react';
 import {Picker, Text, View} from "@tarojs/components";
-import {AtTextarea, AtButton, AtInput, AtListItem, AtList, AtTag, AtCheckbox, AtFloatLayout} from "taro-ui";
-import Footer from "../../component/Footer/Footer";
+import {AtTextarea, AtButton, AtInput, AtListItem, AtList, AtCheckbox, AtFloatLayout} from "taro-ui";
 
 import './publish.scss'
 
@@ -185,9 +184,6 @@ export default class Publish extends React.Component {
               </View>
             </Picker>
           </View>
-        </View>
-        <View>
-          <Footer class='footer'/>
         </View>
       </View>
     )

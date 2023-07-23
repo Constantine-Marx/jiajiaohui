@@ -1,26 +1,21 @@
-export const toHome = () => {
+import {ON_SELECT,OFF_SELECT} from "./constants";
+
+export const createOnSelectAction = (id) => {
   return {
-    type: 'toPage',
-    payload: {
-      num:0
+    type: ON_SELECT,
+    data: {
+      isSelect: true,
+      id
     }
   }
 }
 
-export const toPublish = () => {
+export const createOffSelectAction = (id) => {
   return {
-    type: 'toPage',
-    payload: {
-      num:1
-    }
-  }
-}
-
-export const toUser = () => {
-  return {
-    type: 'toPage',
-    payload: {
-      num:2
+    type: OFF_SELECT,
+    data: {
+      isSelect: false,
+      id
     }
   }
 }

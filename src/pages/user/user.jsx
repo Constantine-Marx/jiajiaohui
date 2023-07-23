@@ -1,4 +1,3 @@
-import Footer from "../../component/Footer/Footer";
 import {View, Button, Text} from "@tarojs/components";
 import Taro from '@tarojs/taro';
 
@@ -48,10 +47,11 @@ export default function User() {
           border: '1px solid black', padding: '10px', whiteSpace: 'pre-wrap',
           width: '200px', height: '100px'
         }}>
-          {sucData.data}
+          <Text selectable={true}>
+            {sucData.data}
+          </Text>
         </View>
       )}
-      <Footer class='footer'/>
     </View>
   )
 }

@@ -1,16 +1,20 @@
-import {View} from '@tarojs/components'
+import {View, Image} from '@tarojs/components'
 import './index.scss'
+import React from "react";
 import Header from "../../containers/Header/Header";
-import Footer from '../../component/Footer/Footer';
-import Body from "../../containers/Body/Body";
 
-export default function Index() {
+export default class Index extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '',
+    }
+  }
 
-  return (
-    <View className='tutor' disableScroll='true'>
-      <Header class='header' />
-      <Body class='body' />
-      <Footer class='footer' />
-    </View>
-  )
+  render() {
+    return (
+    <Header />
+    )
+  }
 }
+
