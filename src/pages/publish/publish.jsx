@@ -112,6 +112,7 @@ export default class Publish extends React.Component {
               placeholder='你的问题是...'
             />
           </View>
+        
         </View>
         <View className={'link'} style={{margin: '0 20px 10px 20px'}}>
           <AtButton type='primary' circle='true'>邀请他人填写</AtButton>
