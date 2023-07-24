@@ -1,4 +1,4 @@
 export default definePageConfig({
-  navigationBarTitleText: '我的',
+  navigationBarTitleText: '佳教汇',
   usingComponents: {},
 })
