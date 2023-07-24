@@ -1,6 +1,6 @@
 import React from 'react';
 import {Picker, Text, View} from "@tarojs/components";
-import {AtTextarea, AtButton, AtInput, AtListItem, AtList, AtTag, AtCheckbox, AtFloatLayout} from "taro-ui";
+import {AtGrid,AtCard,AtTextarea, AtButton, AtInput, AtListItem, AtList, AtTag, AtCheckbox, AtFloatLayout} from "taro-ui";
 import Footer from "../../component/Footer/Footer";
 
 import './publish.scss'
@@ -113,6 +113,7 @@ export default class Publish extends React.Component {
               placeholder='你的问题是...'
             />
           </View>
+        
         </View>
         <View className={'link'} style={{margin: '0 20px 10px 20px'}}>
           <AtButton type='primary' circle='true'>邀请他人填写</AtButton>
