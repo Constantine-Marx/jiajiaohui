@@ -10,7 +10,7 @@ export default class Card extends React.Component {
       city:'广州海珠区',
       level:'小学/五年级',
       pay:'800元',
-      id:19438
+      id:19438,
       count:'2',
       location:'广州市海珠区工业大道北榕景路112~166号'
 
