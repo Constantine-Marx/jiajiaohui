@@ -1,3 +1,6 @@
 import '@nutui/nutui-react-taro/dist/style.css';
 
-
+page {
+  --nutui-picker-bar-cancel-font-size: 30px;
+  --nutui-picker-bar-ok-font-size: 30px;
+}
