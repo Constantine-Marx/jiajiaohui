@@ -1,11 +1,9 @@
-import Footer from "../../component/Footer/Footer";
 import {Text, View,Form, Textarea, Button, Input, Picker} from "@tarojs/components";
 import React, { useState, useEffect } from 'react';
 
+import './contactors.scss'
 
-import './publish.scss'
-
-export default function contactorPublish() {
+export default function Contactors() {
     const data = {};
     return (
       <View className='contactor_publish'>
@@ -23,50 +21,50 @@ export default function contactorPublish() {
           <Text>学生情况填写</Text>
           <Form>
             <View >
-              <Text >年级</Text>  
+              <Text >年级</Text>
               <Picker>
                 <View>选择学生年纪</View>
               </Picker>
             </View>
             <View >
-              <Text >辅导科目</Text>  
+              <Text >辅导科目</Text>
               <Picker>
                 <View>选择需要辅导的科目</View>
-              </Picker>          
+              </Picker>
             </View>
             <View >
-              <Text >课程频次</Text>  
+              <Text >课程频次</Text>
               <Picker>
                 <View></View>
-              </Picker>          
+              </Picker>
             </View>
             <View >
-              <Text >开课时间</Text>  
+              <Text >开课时间</Text>
               <Picker>
                 <View></View>
-              </Picker>          
+              </Picker>
             </View>
             <View >
-              <Text >课程薪酬</Text>  
-              <Input placeholder="100"></Input> 
-              <Text> 元/小时</Text>       
+              <Text >课程薪酬</Text>
+              <Input placeholder="100"></Input>
+              <Text> 元/小时</Text>
             </View>
             <View >
-              <Text >预计信息费</Text>  
-              <Input placeholder="100"></Input> 
+              <Text >预计信息费</Text>
+              <Input placeholder="100"></Input>
               <Button>规则设置</Button>
             </View>
             <View >
-              <Text >课程形式</Text>  
+              <Text >课程形式</Text>
               <Picker>
                 <View>选择课程展开的形式</View>
-              </Picker>          
+              </Picker>
             </View>
             <View >
-              <Text >课程地址</Text>  
+              <Text >课程地址</Text>
               <Picker>
                 <View></View>
-              </Picker>          
+              </Picker>
             </View>
           </Form>
         </View>
@@ -74,34 +72,34 @@ export default function contactorPublish() {
           <Text>对家教的要求</Text>
           <Form>
             <View >
-              <Text >学历</Text>  
+              <Text >学历</Text>
               <Picker>
                 <View>无要求</View>
-              </Picker>          
+              </Picker>
             </View>
             <View >
-              <Text >性别</Text>  
+              <Text >性别</Text>
               <Picker>
                 <View>无要求</View>
-              </Picker>          
+              </Picker>
             </View>
             <View >
-              <Text >经验</Text>  
+              <Text >经验</Text>
               <Picker>
                 <View>无要求</View>
-              </Picker>          
+              </Picker>
             </View>
             <View >
-              <Text >职业</Text>  
+              <Text >职业</Text>
               <Picker>
                 <View>无要求</View>
-              </Picker>          
+              </Picker>
             </View>
             <View >
-              <Text >其他要求</Text>  
-              <Textarea></Textarea>         
+              <Text >其他要求</Text>
+              <Textarea></Textarea>
             </View>
-          </Form> 
+          </Form>
         </View>
       </View>
     )

@@ -1,7 +1,7 @@
-import {View, Image} from '@tarojs/components'
 import './index.scss'
 import React from "react";
 import Header from "../../containers/Header/Header";
+import Body from "../../containers/Body/Body";
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -13,8 +13,11 @@ export default class Index extends React.Component {
 
   render() {
     return (
-    <Header />
-    )
+      <>
+        <Header/>
+        <Body/>
+      </>
+  )
   }
 }
 

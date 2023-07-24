@@ -1,5 +1,8 @@
 @import '@nutui/nutui-react-taro/dist/style.css';
 
 page{
-  --nutui-cell-title-color:"white";
+  --nutui-picker-bar-cancel-font-size: 30px;
+  --nutui-picker-bar-ok-font-size: 30px;
+  --nutui-picker-bar-ok-font-color: #ff0;
+  --nutui-picker-item-text-font-size: 36px;
 }

@@ -4,7 +4,6 @@ function reducers(state = OFF_SELECT, action) {
   const {type, data} = action;
   switch (type) {
     case ON_SELECT:
-      console.log('reducers', type)
       switch (data.id) {
         case 0:
           return {
@@ -26,7 +25,6 @@ function reducers(state = OFF_SELECT, action) {
           return state;
       }
     case OFF_SELECT:
-      console.log('reducers', type)
       switch (data.id) {
         case 0:
           return {
