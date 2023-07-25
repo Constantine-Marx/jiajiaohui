@@ -4,19 +4,20 @@ import Header from "../../containers/Header/Header";
 import Body from "../../containers/Body/Body";
 
 export default class Index extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: '',
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: '',
+        }
     }
-  }
 
-  render() {
-    return (
-      <>
-        <Header/>
-      </>
-  )
-  }
+    render() {
+        return (
+            <>
+                <Header/>
+                <Body/>
+            </>
+        )
+    }
 }
 

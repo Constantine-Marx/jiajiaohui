@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View} from "@tarojs/components";
 import {Row} from "@nutui/nutui-react-taro";
-import Contactors from "../../pages/contactors/contactors";
-
+import Card from "../../component/card/card";
 
 export default class Body extends Component {
 
@@ -17,7 +16,7 @@ export default class Body extends Component {
           </Text>
         </View>
         <View>
-          <Contactors/>
+          <Card/>
         </View>
       </>
     )

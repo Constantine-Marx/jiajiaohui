@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Taro from '@tarojs/taro';
+import React from 'react';
 import { View, Text, Image } from '@tarojs/components';
 import styles from './card.module.scss';
 
