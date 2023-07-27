@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image } from '@tarojs/components';
-import styles from './card.module.scss';
+import {styles} from './card.module.scss';
 
 export default class Card extends React.Component {
   constructor(props) {

@@ -10,6 +10,7 @@ import {
 } from "../../store/actions";
 import {Text, View} from "@tarojs/components";
 import './Header.scss'
+import {Button} from 'tdesign-mobile-react';
 
 const timeList = [
   {
@@ -472,6 +473,11 @@ export default class Header extends Component {
             onClose={() => store.dispatch(createOffSelectAction(3))}
           />
         </Col>
+          <Button size='large'
+                  shape='rectangle'
+                  block>
+              here
+          </Button>
       </View>
     </ConfigProvider>);
   }
