@@ -473,11 +473,6 @@ export default class Header extends Component {
             onClose={() => store.dispatch(createOffSelectAction(3))}
           />
         </Col>
-          <Button size='large'
-                  shape='rectangle'
-                  block>
-              here
-          </Button>
       </View>
     </ConfigProvider>);
   }
