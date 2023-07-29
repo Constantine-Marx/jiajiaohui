@@ -16,8 +16,6 @@ export default class Body extends Component {
           </Text>
         </View>
         <View>
-         {/*test for branc*/}
-        </View>
       </>
     )
   }
