@@ -18,7 +18,7 @@ export default class Body extends Component {
         <View>
           {/*wtf?*/}
         </View>
-      </>
+
     )
   }
 }
