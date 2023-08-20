@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { View, Text ,Image} from '@tarojs/components';
 
 import styles from './card.module.scss';
-g
+
 export default class Card extends Component {
   constructor(props) {
     super(props);
