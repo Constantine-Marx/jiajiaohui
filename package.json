@@ -69,7 +69,8 @@
     "redux-thunk": "^2.4.2",
     "taro-ui": "^3.1.0-beta.2",
     "tdesign-miniprogram": "^1.1.13",
-    "tdesign-mobile-react": "^0.3.1"
+    "tdesign-mobile-react": "^0.3.1",
+    "weui-miniprogram": "^1.2.10"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
