@@ -1,1 +1,27 @@
 @import "~taro-ui/dist/style/components";
+
+
+page {
+    background-color: #f8f8f8;
+    --nutui-input-font-size: 23px;
+    --nutui-input-padding: 0 0 0 0;
+    --nutui-form-item-label-font-size: 30px;
+    --nutui-form-item-label-width: 70px;
+    --nutui-form-item-label-text-align: left;
+    --nutui-form-item-required-margin-right: 0;
+    --nutui-form-item-body-font-size:20px;
+    --nutui-picker-bar-ok-color: #000;
+    --nutui-picker-bar-cancel-color: #1f3a2d;
+}
+
+.publish__parent__title {
+    color: var(--text-icon-font-gy-190, rgba(0, 0, 0, 0.90));
+    font-size: 50px;
+    font-style: normal;
+}
+
+.publish__student {
+    box-shadow:(0 15px 15px 0 rgba(167, 163, 163, 0.25));
+    font-family: PingFang SC;
+    font-weight: bold;
+}
