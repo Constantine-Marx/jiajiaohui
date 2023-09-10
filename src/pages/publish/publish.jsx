@@ -9,6 +9,7 @@ import {
 } from "../../store/actions";
 import {AtIcon} from "taro-ui";
 
+
 const frequencyList = [
     {text: '1次/周', value: '1次/周'},
     {text: '2次/周', value: '2次/周'},
