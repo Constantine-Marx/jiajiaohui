@@ -8,8 +8,9 @@ import store from "../../store";
 import {
     createOffSelectAction, createOnSelectAction,
 } from "../../store/actions";
-import {Image, Text, View} from "@tarojs/components";
-import './Header.scss';
+import {Text, View} from "@tarojs/components";
+import './Header.scss'
+import {Button} from 'tdesign-mobile-react';
 
 const timeList = [
     {
@@ -340,7 +341,7 @@ export default class Header extends Component {
         this.setState({
             title_0: value,
         });
-        store.dispatch(createOffSelectAction("index_timeSort"));
+        store.dispatch(createOffSelectAction(0));
     }
 
     onConfirm_1 = (List, value) => {
@@ -348,7 +349,7 @@ export default class Header extends Component {
         this.setState({
             title_1: value,
         });
-        store.dispatch(createOffSelectAction('index_priceSort'));
+        store.dispatch(createOffSelectAction(1));
     }
 
     onConfirm_2 = (List, value) => {
@@ -356,7 +357,7 @@ export default class Header extends Component {
         this.setState({
             title_2: value,
         });
-        store.dispatch(createOffSelectAction('index_stateSort'));
+        store.dispatch(createOffSelectAction(2));
     }
 
     onConfirm_3 = (List, value) => {
@@ -364,123 +365,128 @@ export default class Header extends Component {
         this.setState({
             title_3: value,
         });
-        store.dispatch(createOffSelectAction('index_regionSort'));
+        store.dispatch(createOffSelectAction(3));
     }
 
     render() {
         // 获取当前时间
-        return (<ConfigProvider>
-            <Row>
-                <Col
-                    span={5}
-                    offset="22"
+        return (
+            <ConfigProvider>
+                <Row>
+                    <Col
+                        className="title_1"
+                        span={5}
+                        offset="22"
+                        style={{
+                            textAlign: "center", fontWeight: "bold",
+                            fontSize: "20px",
+                            width: "85%",
+                            height: "60px",
+                            color: "#212121",
+                            padding: "25px 0",
+                        }}
+                    >
+                        我发布的课源
+                    </Col>
+                    <Col span={1}
+                         style={{
+                             padding: "25px 0",
+                         }}
+                    >
+                        <IconFont
+                            name="notice"
+                            size="20"
+                            color="#000"
+                            onClick={() => {
+                                console.log("notice");
+                            }}
+                        />
+                    </Col>
+                </Row>
+
+                <View
+                    className="selector"
                     style={{
-                        textAlign: "center", fontWeight: "bold", fontSize: "20px",
+                        width: "85%", height: "40px", backgroundColor: "black", borderRadius: "8px", margin: "0 auto",
+                        padding: "5px 15px", gap: "21px"
                     }}
-                >
-                    我发布的课源
-                </Col>
-                <Col span={1}>
-                    {/*<IconFont*/}
-                    {/*  name="notice"*/}
-                    {/*  size="20"*/}
-                    {/*  color="#000"*/}
-                    {/*  onClick={() => {*/}
-                    {/*    console.log("notice");*/}
-                    {/*  }}*/}
-                    {/*/>*/}
+              >
+                    <Col span={6} style={{textAlign: "center"}}>
+                        <Row style={{height: 8}}></Row>
+                        <Text
+                            onClick={() => {
+                                store.dispatch(createOnSelectAction(0));
+                            }}
+                            style={{color: "white", fontSize: 14}}
+                        >
+                            {this.state.title_0}
+                        </Text>
+                        <Picker
+                            onConfirm={(timeList, value) => this.onConfirm_0(timeList, value)}
+                            options={timeList}
+                            visible={store.getState().isSelect_0}
+                            onClose={() => store.dispatch(createOffSelectAction(0))}
+                        />
+                    </Col>
 
-                    <View onClick={() => {
-                        console.log("notice");
-                    }
-                    }>
-                        <Image src={"src/containers/Header/bell-2.png"}
-                               style={{width: "20px", height: "20px", marginTop: "10px", marginLeft: "10px"}}/>
-                    </View>
-                </Col>
-            </Row>
+                    <Col span={6} style={{textAlign: "center"}}>
+                        <Row style={{height: 8}}></Row>
+                        <Text
+                            title=""
+                            onClick={() => {
+                                store.dispatch(createOnSelectAction(1));
+                            }}
+                            style={{color: "white", fontSize: 14}}
+                        >
+                            {this.state.title_1}
+                        </Text>
+                        <Picker
+                            onConfirm={(incomeList, value) => this.onConfirm_1(incomeList, value)}
+                            options={incomeList}
+                            visible={store.getState().isSelect_1}
+                            onClose={() => store.dispatch(createOffSelectAction(1))}
+                        />
+                    </Col>
 
-            <View
-                className="selector_4"
-                style={{
-                    width: "670rpx", height: "72rpx", backgroundColor: "black", borderRadius: "10px", margin: "0 auto",
-                }}
-            >
-                <Col span={6} style={{textAlign: "center"}}>
-                    <Row style={{height: 8}}></Row>
-                    <Text
-                        onClick={() => {
-                            store.dispatch(createOnSelectAction("index_timeSort"));
-                        }}
-                        style={{color: "white", fontSize: 14}}
-                    >
-                        {this.state.title_0}
-                    </Text>
-                    <Picker
-                        onConfirm={(timeList, value) => this.onConfirm_0(timeList, value)}
-                        options={timeList}
-                        visible={store.getState().isSelect_0}
-                        onClose={() => store.dispatch(createOffSelectAction("index_timeSort"))}
-                    />
-                </Col>
+                    <Col span={6} style={{textAlign: "center"}}>
+                        <Row style={{height: 8}}></Row>
+                        <Text
+                            title=""
+                            onClick={() => {
+                                store.dispatch(createOnSelectAction(2));
+                            }}
+                            style={{color: "white", fontSize: 14}}
+                        >
+                            {this.state.title_2}
+                        </Text>
+                        <Picker
+                            onConfirm={(stateList, value) => this.onConfirm_2(stateList, value)}
+                            options={stateList}
+                            visible={store.getState().isSelect_2}
+                            onClose={() => store.dispatch(createOffSelectAction(2))}
+                        />
+                    </Col>
 
-                <Col span={6} style={{textAlign: "center"}}>
-                    <Row style={{height: 8}}></Row>
-                    <Text
-                        title=""
-                        onClick={() => {
-                            store.dispatch(createOnSelectAction('index_priceSort'));
-                        }}
-                        style={{color: "white", fontSize: 14}}
-                    >
-                        {this.state.title_1}
-                    </Text>
-                    <Picker
-                        onConfirm={(incomeList, value) => this.onConfirm_1(incomeList, value)}
-                        options={incomeList}
-                        visible={store.getState().isSelect_1}
-                        onClose={() => store.dispatch(createOffSelectAction('index_priceSort'))}
-                    />
-                </Col>
+                    <Col span={6} style={{textAlign: "center"}}>
+                        <Row style={{height: 8}}></Row>
+                        <Text
+                            title=""
+                            onClick={() => {
+                                store.dispatch(createOnSelectAction(3));
+                            }}
+                            style={{color: "white", fontSize: 14}}
+                        >
+                            {this.state.title_3}
+                        </Text>
+                        <Picker
+                            onConfirm={(regionList, value) => this.onConfirm_3(regionList, value)}
+                            options={regionList}
+                            visible={store.getState().isSelect_3}
+                            onClose={() => store.dispatch(createOffSelectAction(3))}
+                        />
+                    </Col>
 
-                <Col span={6} style={{textAlign: "center"}}>
-                    <Row style={{height: 8}}></Row>
-                    <Text
-                        title=""
-                        onClick={() => {
-                            store.dispatch(createOnSelectAction( "index_stateSort"));
-                        }}
-                        style={{color: "white", fontSize: 14}}
-                    >
-                        {this.state.title_2}
-                    </Text>
-                    <Picker
-                        onConfirm={(stateList, value) => this.onConfirm_2(stateList, value)}
-                        options={stateList}
-                        visible={store.getState().isSelect_2}
-                        onClose={() => store.dispatch(createOffSelectAction( "index_stateSort"))}
-                    />
-                </Col>
-
-                <Col span={6} style={{textAlign: "center"}}>
-                    <Row style={{height: 8}}></Row>
-                    <Text
-                        title=""
-                        onClick={() => {
-                            store.dispatch(createOnSelectAction("index_regionSort"));
-                        }}
-                        style={{color: "white", fontSize: 14}}
-                    >
-                        {this.state.title_3}
-                    </Text>
-                    <Picker
-                        onConfirm={(regionList, value) => this.onConfirm_3(regionList, value)}
-                        options={regionList}
-                        visible={store.getState().isSelect_3}
-                        onClose={() => store.dispatch(createOffSelectAction("index_regionSort"))}
-                    />
-                </Col>
-            </View>
-        </ConfigProvider>);
+                </View>
+            </ConfigProvider>);
     }
 }

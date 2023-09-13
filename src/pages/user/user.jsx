@@ -14,7 +14,7 @@ export default function User() {
           //发起网络请求
           Taro.request({
             method: 'POST',
-            url: 'https://tutorhub.top/sessions',
+            url: 'https://api.tutorhub.top/sessions',
             data: {
               auth_code: res.code
             },

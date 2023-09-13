@@ -1,1 +1,20 @@
 @import 'tdesign-mobile-react/es/style/index.css';
+
+.title_1{
+    font-family: PingFang SC, serif;
+    color: #212121;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.selector{
+    color: #FFF;
+    font-family: PingFang SC, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 250% */
+}

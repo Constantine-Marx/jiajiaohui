@@ -16,8 +16,7 @@ export default class Body extends Component {
           </Text>
         </View>
         <View>
-          {/*wtf?*/}
-        </View>
+          <Card></Card>
 
     )
   }
