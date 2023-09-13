@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, View} from "@tarojs/components";
 import './publish.scss'
-import {Row, Col, Input, Form, Cell} from "@nutui/nutui-react-taro";
-import {Button, InputNumber, TextArea, Picker} from '@nutui/nutui-react';
+import {Row, Col, Input, Form} from "@nutui/nutui-react-taro";
+import {Button, Picker} from '@nutui/nutui-react';
 import store from "../../store";
 import {
     createOffSelectAction, createOnSelectAction,
