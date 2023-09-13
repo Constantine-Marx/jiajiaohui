@@ -17,8 +17,7 @@ export default class Body extends Component {
         </View>
         <View>
           <Card></Card>
-        </View>
-      </>
+
     )
   }
 }
